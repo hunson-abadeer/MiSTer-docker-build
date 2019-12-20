@@ -33,4 +33,4 @@ then
     chmod +x ${arm_build_script_path}
 fi
 
-${arm_build_script_path} "$@"
+${arm_build_script_path} "$@" BASE=armv7-unknown-linux-gnueabi
