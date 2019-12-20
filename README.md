@@ -17,10 +17,7 @@ Command line git and Docker must be installed and properly configured.
 ### MacOS users
 Using homebrew to install git and Docker is recommended but not required.
 
-## Usage
-This repo contains two scripts `mister_quartus_compile.sh` and `mister_arm_compile.sh`
-* `mister_quartus_compile.sh` for compiling FPGA cores
-* `mister_arm_compile.sh` for compiling ARM compatible C binaries 
+## Installation
 
 ### Clone the repo
 ```
@@ -32,6 +29,11 @@ git clone https://github.com/hunson-abadeer/MiSTer-docker-build
 cd MiSTer-docker-build
 docker build -t mister-quartus .
 ```
+## Usage
+This repo contains two scripts `mister_quartus_compile.sh` and `mister_arm_compile.sh`
+* `mister_quartus_compile.sh` for compiling FPGA cores
+* `mister_arm_compile.sh` for compiling ARM compatible C binaries 
+
 ### Compiling ARM compatible binary
 ```
 git clone https://github.com/MiSTer-devel/Main_MiSTer
