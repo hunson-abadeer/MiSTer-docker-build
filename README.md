@@ -26,6 +26,12 @@ This repo contains two scripts `mister_quartus_compile.sh` and `mister_arm_compi
 ```
 git clone https://github.com/hunson-abadeer/MiSTer-docker-build
 ```
+### Locally create and install mister-quartus Docker image
+*please note: creation and install of Docker Quartus image will take some time*
+```
+cd MiSTer-docker-build
+docker build -t mister-quartus .
+```
 ### Compiling ARM compatible binary
 ```
 git clone https://github.com/MiSTer-devel/Main_MiSTer
@@ -43,8 +49,7 @@ cd MegaCD_MiSTer
 ```
 If compile was successful there will be a new file `MegaCD.rbf` in the `MegaCD_MiSTer/output` directory.
 ## Notes
-The first time `mister_quartus_compile.sh` and `mister_arm_compile.sh` are run will invoke Docker to download and install two separate docker images.
-
+The first time `mister_arm_compile.sh` is run Docker will download and install the Linux ARM Docker environment.
 This can take considerable time depending on the network bandwidth available.  This is a one time time cost and subsequent runs will not need to perform this step.
 
 Compiling the RBF core files can take considerable time and memory.  Compiling the MegaCD core took around 7GB of memory and 30 minutes.  The `MegaCD.flow.rpt` file written to the `MegaCD_MiSTer/output` directory reports build time and memory usage.
